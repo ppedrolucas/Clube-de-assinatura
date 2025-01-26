@@ -1,5 +1,5 @@
 #hero {
-  background: url(../assets/hero-background.png) no-repeat top center/contain;
+  background: url(../assets/hero-background.png) no-repeat top center/250% auto;
   height: 100vh;
   animation: aparecer 1.5s linear;
 
@@ -23,6 +23,7 @@
 
 @media (width >= 80em) {
   #hero {
+    background-size: contain;
     div {
       max-width: 41rem;
       padding-top: 17.375rem;
