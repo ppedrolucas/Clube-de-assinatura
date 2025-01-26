@@ -1,5 +1,10 @@
 #header {
   background: transparent;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  padding-inline: 1.25rem;
   .navbar {
     margin-top: 1.25rem;
     display: flex;
@@ -28,10 +33,6 @@
       transition: background 300ms linear;
       overflow: hidden;
 
-      /* &:hover {
-        background-color: var(--pink-base);
-        } */
-
       span {
         width: inherit;
         height: inherit;
@@ -43,9 +44,8 @@
         position: relative;
         z-index: 1;
 
-        font-family: var(--ff-sans);
         font-weight: var(--fw-bold);
-        font-size: var(--fs-sm);
+        font-size: var(--btn);
 
         &:hover::before {
           scale: 1;

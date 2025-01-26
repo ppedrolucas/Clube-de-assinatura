@@ -35,28 +35,40 @@
   --fs-base: 1rem;
   --fs-lg: 2rem;
 
-  --title-lg: 3rem;
+  /* title-lg: 48px/3rem */
+  --title-lg: 1.75rem;
   --title-md: 2.5rem;
-  --title-sm: var(--fs-lg);
-  --title-xs: var(--fs-base);
+  --title-sm: 2rem;
+  --title-xs: 1rem;
 
   --subtitle: 2rem;
   
-  --body-lg: 1.25rem;
-  --body-md: var(--fs-base);
-  --body-sm: var(--fs-sm);
+  /* body-lg: 1.25rem/20px */
+  --body-lg: 0.875rem;
+  --body-md: 1rem;
+  --body-sm: 0.875rem;
   --body-xs: 0.75rem;
 
-  --btn: var(--fs-sm);
+  --btn: 0.875rem;
 
-  --link: var(--fs-sm);
+  --link: 0.875rem;
 
   --tag: 0.625rem;
 }
 body{
+  font-family: var(--ff-sans);
   background-color: var(--shape-background);
   color: var(--text-body);
-  padding-inline: 1.25rem;
+}
+
+.title{
+  font-weight: var(--fw-bold);
+  font-size: var(--title-lg);
+  color: var(--text-title);
+}
+
+.text-sm{
+  font-size: var(--body-lg);
 }
 
 .container{
@@ -65,6 +77,11 @@ body{
 }
 
 @media (width >= 80em){
+  :root{
+    --title-lg: 3rem;
+    --body-lg: 1.25rem;
+
+  }
   .container{
     max-width: 90rem;
   }

@@ -1,0 +1,21 @@
+#hero {
+  background: url(../assets/hero-background.png) no-repeat top center/contain;
+  height: 100vh;
+
+  div {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+    padding-top: 7.25rem;
+    max-width: 20.9375rem;
+  }
+}
+
+@media (width >= 80em) {
+  #hero {
+    div {
+      max-width: 41rem;
+      padding-top: 17.375rem;
+    }
+  }
+}
