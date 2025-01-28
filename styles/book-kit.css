@@ -1,0 +1,161 @@
+section#book-kit {
+  header {
+    margin-top: 104px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-bottom: 0.5rem;
+      h2 {
+        font-size: var(--title-sm);
+      }
+      img {
+        width: 1.25rem;
+        height: 1.25rem;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+    }
+    p {
+      font-size: var(--body-sm);
+    }
+  }
+
+  .book-kit {
+    margin-top: 4rem;
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 400px;
+
+    & > img {
+      position: absolute;
+      width: auto;
+    }
+
+    & img:nth-child(1) {
+      height: 207px;
+      z-index: 5;
+    }
+    & img[src*="bookmark-yellow"] {
+      height: 180px;
+      z-index: -1;
+
+      animation: bookmark-yellow ease-in-out both;
+      animation-timeline: view();
+      animation-range: entry;
+
+      transform: translate(0, 0);
+      rotate: 11.72deg;
+    }
+    & img[src*="bookmark-purple"] {
+      height: 180px;
+      z-index: -2;
+
+      animation: bookmark-purple linear both;
+      animation-timeline: view();
+      animation-range: entry;
+
+      transform: translate(0, 0);
+      rotate: 22.09deg;
+    }
+
+    & img[src*="pin"] {
+      height: 85.4px;
+      z-index: -3;
+
+      animation: pin linear both;
+      animation-timeline: view();
+      animation-range: entry;
+
+      transform: translate(0, 0);
+      rotate: 7.55deg;
+    }
+  }
+}
+
+@keyframes bookmark-yellow {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(80px, -55px);
+  }
+}
+@keyframes bookmark-purple {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(115px, -45px);
+  }
+}
+@keyframes pin {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-78px, 105px);
+  }
+}
+
+@media (width >= 80em) {
+  section#book-kit {
+    .book-kit {
+      height: 100vh;
+      & img:nth-child(1) {
+        height: 617px;
+      }
+
+      & img[src*="bookmark-yellow"] {
+        height: 536px;
+        rotate: 12deg;
+      }
+
+      & img[src*="bookmark-purple"] {
+        height: 536px;
+        rotate: 22deg;
+      }
+
+      & img[src*="pin"] {
+        height: 254px;
+        rotate: 8deg;
+      }
+    }
+  }
+
+  @keyframes bookmark-yellow {
+    from {
+      transform: translate(0);
+      opacity: 0;
+    }
+    to {
+      transform: translate(230px, -190px);
+      opacity: 1;
+    }
+  }
+  @keyframes bookmark-purple {
+    from {
+      transform: translate(0);
+      opacity: 0;
+    }
+    to {
+      transform: translate(340px, -119px);
+      opacity: 1;
+    }
+  }
+  @keyframes pin {
+    from {
+      transform: translate(0);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-235px, 305px);
+      opacity: 1;
+    }
+  }
+}
