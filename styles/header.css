@@ -24,7 +24,7 @@
       align-items: center;
       justify-content: center;
 
-      width: 4.875rem;
+      width: 5.5625rem;
       height: 2.5rem;
       border-radius: 0.5rem;
 
@@ -53,8 +53,8 @@
 
         &::before {
           content: "";
-          width: 4.875rem;
-          height: 4.875rem;
+          width: 5.7rem;
+          height: 5.7rem;
           border-radius: 50%;
           background-color: var(--pink-base);
           position: absolute;

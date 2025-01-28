@@ -1,32 +1,54 @@
 #hero {
-  background: url(../assets/hero-background.png) no-repeat top center/250% auto;
-  height: 100vh;
-  animation: aparecer 1.5s linear;
+  background: url(../assets/hero-background.png) no-repeat top center/cover;
+  height: 70vh;
+  animation: aparecer 2.5s linear both;
+  animation-delay: 300ms;
+
+  /* display: grid;
+  grid-template-rows: 1fr 15.6875rem;
+  gap: 2rem; */
 
   div {
     text-align: center;
-    display: grid;
-    gap: 1rem;
-    padding-top: 7.25rem;
     max-width: 20.9375rem;
+
+    & h1 + p {
+      margin-top: 1rem;
+    }
+  }
+
+  div:nth-child(1) {
+    padding-top: 7.25rem;
+  }
+  div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
   }
 }
 
 @keyframes aparecer {
-  to {
-    opacity: 1;
-  }
   from {
     opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
 @media (width >= 80em) {
   #hero {
-    background-size: contain;
+    height: 100vh;
+    background-size: cover;
+    div:nth-child(1) {
+      padding-top: 17.375rem;
+    }
+    div:nth-child(2) {
+      max-width: 1136px;
+    }
     div {
       max-width: 41rem;
-      padding-top: 17.375rem;
     }
   }
 }
