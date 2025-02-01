@@ -19,8 +19,11 @@ section.mystery {
     position: relative;
     rotate: -15deg;
     transition: transform 500ms;
-  }
 
+    animation: hulbuster linear backwards, stressedOut ease-in-out backwards;
+    animation-timeline: view();
+    animation-range: 128px 360px;
+  }
   img:hover {
     transform: rotate(-30deg);
   }
@@ -49,8 +52,7 @@ section.mystery {
     opacity: 1;
     animation: hulbuster linear backwards;
     animation-timeline: view();
-    animation-range: entry;
-    animation-delay: 300ms;
+    animation-range: 128px 360px;
   }
 }
 
@@ -60,6 +62,14 @@ section.mystery {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes stressedOut {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
   }
 }
 

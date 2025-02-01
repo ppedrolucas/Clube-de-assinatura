@@ -43,6 +43,30 @@ section#book-kit {
       height: 207px;
       z-index: 5;
     }
+    & img[src*="capaDura"] {
+      transform: translate(0, 0);
+
+      animation: capaDura linear both;
+      animation-timeline: view();
+      animation-range: 128px 360px;
+    }
+
+    & img[src*="marcaPaginas"] {
+      transform: translate(0, 0);
+
+      animation: marcaPaginas linear both;
+      animation-timeline: view();
+      animation-range: entry;
+    }
+
+    & img[src*="exclusivo"] {
+      transform: translate(0, 0);
+
+      animation: exclusivo linear both;
+      animation-timeline: view();
+      animation-range: 128px 360px;
+    }
+
     & img[src*="bookmark-yellow"] {
       height: 180px;
       z-index: -1;
@@ -102,6 +126,30 @@ section#book-kit {
   }
   to {
     transform: translate(-78px, 105px);
+  }
+}
+@keyframes capaDura {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-323px, -330px);
+  }
+}
+@keyframes marcaPaginas {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(270px, 350px);
+  }
+}
+@keyframes exclusivo {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-358px, 105px);
   }
 }
 
