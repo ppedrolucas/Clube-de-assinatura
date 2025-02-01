@@ -1,29 +1,31 @@
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --pink-light: #C59DD2;
-  --pink-base: #9547A5;
-  --pink-dark: #7D298A;
-  --pink-low: #3F0F41;
+:root {
+  --pink-light: #c59dd2;
+  --pink-base: #9547a5;
+  --pink-dark: #7d298a;
+  --pink-low: #3f0f41;
 
-  --blue-light: #73B6D2;
-  --blue-base: #358BB9;
-  --blue-mid: #2374A4;
-  --blue-dark: #144A72;
-  --blue-low: #08233C;
+  --blue-light: #73b6d2;
+  --blue-base: #358bb9;
+  --blue-mid: #2374a4;
+  --blue-dark: #144a72;
+  --blue-low: #08233c;
 
   --shape-stroke: #002347;
-  --shape-hover: #001933
-  --shape-base: #000F1F;
-  --shape-background: #00050A;
+  --shape-hover: #001933;
+  --shape-base: #000f1f;
+  --shape-background: #00050a;
 
-  --text-title: #F8FBFB;
-  --text-body: #E2E7E9;
-  --text-label: #BAC6C9;
+  --text-title: #f8fbfb;
+  --text-body: #e2e7e9;
+  --text-label: #bac6c9;
 
   /* Fonts */
   --ff-sans: "Raleway", sans-serif;
@@ -38,11 +40,11 @@
   /* title-lg: 48px/3rem */
   --title-lg: 1.75rem;
   --title-md: 2.5rem;
-  --title-sm: 2rem;
+  --title-sm: 1.5rem;
   --title-xs: 1rem;
 
   --subtitle: 1rem;
-  
+
   /* body-lg: 1.25rem/20px */
   --body-lg: 0.875rem;
   --body-md: 1rem;
@@ -55,45 +57,50 @@
 
   --tag: 0.625rem;
 }
-body{
+body {
   font-family: var(--ff-sans);
   background-color: var(--shape-background);
   color: var(--text-body);
 }
 
-strong{
+strong {
   color: var(--blue-light);
 }
 
-.title{
+.title {
   font-weight: var(--fw-bold);
   font-size: var(--title-lg);
   color: var(--text-title);
 }
-.subtitle{
+.subtitle {
   font: 500 var(--subtitle) / 1.4 var(--ff-sans);
 }
 
-.text-sm{
+.text-sm {
   font-size: var(--body-lg);
 }
-
-.container{
+.pb {
+  padding-block: 6.75rem;
+}
+.container {
   max-width: 20.9375rem;
   margin-inline: auto;
 }
 
-@media (width >= 80em){
-  :root{
+@media (width >= 80em) {
+  :root {
     --title-lg: 3rem;
     --body-lg: 1.25rem;
     --subtitle: 2rem;
-
+    --title-sm: 2rem;
   }
-  .subtitle{
-    line-height: 2.0;
+  .pb {
+    padding-block: 14rem;
   }
-  .container{
+  .subtitle {
+    line-height: 2;
+  }
+  .container {
     max-width: 90rem;
   }
 }
