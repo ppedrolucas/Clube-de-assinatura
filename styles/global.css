@@ -57,6 +57,9 @@
 
   --tag: 0.625rem;
 }
+a {
+  text-decoration: none;
+}
 li {
   list-style: none;
 }
