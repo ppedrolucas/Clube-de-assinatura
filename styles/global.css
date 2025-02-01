@@ -57,6 +57,9 @@
 
   --tag: 0.625rem;
 }
+li {
+  list-style: none;
+}
 body {
   font-family: var(--ff-sans);
   background-color: var(--shape-background);
@@ -93,9 +96,6 @@ strong {
     --body-lg: 1.25rem;
     --subtitle: 2rem;
     --title-sm: 2rem;
-  }
-  .pb {
-    padding-block: 14rem;
   }
   .subtitle {
     line-height: 2;
